@@ -1,0 +1,23 @@
+https://jakearchibald.com/2017/es-modules-in-browsers/
+https://stackoverflow.com/questions/42237388/syntaxerror-import-declarations-may-only-appear-at-top-level-of-a-module
+https://threejsfundamentals.org/threejs/lessons/threejs-load-gltf.html
+https://threejs.org/docs/#examples/en/controls/OrbitControls
+https://github.com/mrdoob/three.js/blob/master/examples/jsm/controls/OrbitControls.js
+https://threejs.org/examples/#misc_controls_orbit
+https://github.com/mrdoob/three.js/blob/master/examples/misc_controls_orbit.html
+https://stackoverflow.com/questions/59769090/three-js-uncaught-typeerror-three-orbitcontrols-is-not-a-constructor
+https://threejs.org/examples/misc_controls_orbit.html
+https://stackoverflow.com/questions/61714421/three-js-cannot-import-module
+
+https://gist.github.com/bellbind/c4f8c502fcacbe29422e5ac315273858#file-z-monster-jpg // initial example
+https://stackoverflow.com/questions/64155393/three-js-orbitcontrols-is-not-defined
+https://stackoverflow.com/questions/37152104/three-js-orbitcontrols-not-working
+
+https://3dmol.csb.pitt.edu/doc/tutorial-code.html // 3D tutorial
+
+GLTF converters
+https://www.google.com/search?channel=fs&client=ubuntu&q=convert+to+gltf+2.0
+https://blackthread.io/gltf-converter/
+https://modelconverter.com/
+
+https://stackoverflow.com/questions/65742242/imported-three-js-module-orbitcontrols-not-defined //my SO post

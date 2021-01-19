@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chemistry Model</title>
+	<meta charset="utf-8">
+	<!-- <script src="https://unpkg.com/three"></script> -->
+	<!-- <script
+	  src=https://unpkg.com/three/examples/js/loaders/GLTF2Loader.js"
+	></script> -->
+	<!-- <script src="script.js" defer="defer"></script> -->
+  </head>
+  <body>
+    <!-- <p>Hello World</p> -->
+    <!-- <script type="text/javascript"></script> -->
+	<!-- <script src="https://threejs.org/build/three.min.js"></script> -->
+	<!-- <script src="js/three.js"></script> -->
+	<script type="module">
+	  import * as THREE from 'https://unpkg.com/three/build/three.module.js'; //'./node_modules/three';
+	  //import { GLTFLoader } from "./node_modules/three"; 
+	   //https://unpgk.com/three/examples/jsm/loaders/GLTFLoader
+	  //const gltfLoader = new GLTFLoader();
+	  import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/loaders/GLTFLoader.js';
+
+	  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+	  const renderer = new THREE.WebGLRenderer();
+	  renderer.setSize( window.innerWidth, window.innerHeight );
+      document.body.appendChild( renderer.domElement );
+	  const scene = new THREE.Scene();
+	  const loader = new GLTFLoader();
+
+	  loader.load('https://threejsfundamentals.org/threejs/resources/models/cartoon_lowpoly_small_city_free_pack/scene.gltf', (gltf) => {
+			  const root = gltf.scene;
+			  scene.add(root);
+			  const box = new THREE.Box3().setFromObject(root);
+			  const boxSize = box.getSize(new THREE.Vector3()).length();
+              const boxCenter = box.getCenter(new THREE.Vector3());
+			  
+			  //frameArea(boxSize * 0.5, boxSize, boxCenter, camera);
+
+              // update the Trackball controls to handle the new size
+              /*controls.maxDistance = boxSize * 10;
+              controls.target.copy(boxCenter);
+              controls.update();*/
+
+			  //(function animate() {
+              // animation with THREE.AnimationMixer.update(timedelta)
+              //objs.forEach(({mixer}) => {mixer.update(clock.getDelta());});
+			  renderer.render(scene, camera);
+              requestAnimationFrame(renderer);
+    //})();
+	});
+/*
+	  gltfLoader.load(
+
+	    'https://gist.githubusercontent.com/bellbind/c4f8c502fcacbe29422e5ac315273858/raw/4c71656fdef26074a80e4341aeeffcca0463c70a/z-Monster.jpg',
+
+		function ( gltf ) {
+		  scene.add( gltf.scene );
+		  gltf.scene;
+		  gltf.scenes;
+		  gltf.cameras;
+		  gltf.asset;
+		},
+		function ( error ) {
+		  console.log( 'An error happened' );
+        }
+
+
+
+	  ); */
+	</script>
+
+  </body>
+
+</html>
