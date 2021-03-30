@@ -6,10 +6,25 @@
 	  import * as THREE from "https://unpkg.com/three";
 	  import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/loaders/GLTFLoader.js";
 	</script> -->
-    <script src="https://unpkg.com/three"></script>
-	<script src="https://unpkg.com/three/examples/js/loaders/GLTFLoader.js"></script>
-	<!-- <script type="module"> import { OrbitControls } from "https://unpkg.com/three/examples/jsm/controls/OrbitControls.js"; </script> -->
-	<!-- <script src="https://unpkg.com/three/examples/jsm/controls/OrbitControls.js"></script> -->
+    <script src='http://3Dmol.csb.pitt.edu/build/3Dmol-min.js'></script>
+    <div style='height: 400px; width: 400px; position: relative;' class='viewer_3Dmoljs' data-element='molecule' data-type='sdf' data-backgroundcolor='0xffffff' data-style='stick'></div>
+    <textarea id='molecule' style='display: none;'>
+          Avogadro
+
+          4  3  0  0  0  0  0  0  0  0999 V2000
+            0.4750    0.4750    0.4750 N    0  0  0  0  0  0  0  0  0  0  0  0
+            0.9500    0.9500    0.0000 H    0  0  0  0  0  0  0  0  0  0  0  0
+            0.0000    0.9500    0.9500 H    0  0  0  0  0  0  0  0  0  0  0  0
+            0.9500    0.0000    0.9500 H    0  0  0  0  0  0  0  0  0  0  0  0
+          1  2  1  0  0  0  0
+          1  3  1  0  0  0  0
+          1  4  1  0  0  0  0
+        M  END
+    </textarea>
+    <script src="./js/three.js"></script><!-- https://unpkg.com/three -->
+	<script src="https://unpkg.com/three/examples/js/loaders/GLTFLoader.js"></script><!--  type="module" src="./js/GLTFLoader.js"-->
+	<script type="module"> import { OrbitControls } from "https://unpkg.com/three/examples/jsm/controls/OrbitControls.js"; </script>
+	<!-- <script src="https://unpkg.com/three/examples/js/controls/OrbitControls.js"></script> -->
 	<!-- script type="module" src="https://unpkg.com/three/examples/jsm/controls/OrbitControls.js"></script> -->
 	<script src="script.js" defer="defer"></script>
   </head>

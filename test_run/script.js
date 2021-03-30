@@ -2,8 +2,10 @@
 "use strict";
 
 function main() {
+	//import { OrbitControls } from "./js/OrbitControls.js";
 	// renderer
 	const renderer = new THREE.WebGLRenderer({antialias: true});
+	renderer.setSize(800, 600);
 	document.body.appendChild(renderer.domElement);
 
 	const camera = new THREE.PerspectiveCamera(30, 800 / 600, 1, 10000);
@@ -20,8 +22,16 @@ function main() {
 			scene.add(gltf.scene);
 	});
 
+	const scene2 = new THREE.Scene();
+	scene2.add(new THREE.AmbientLight(0xFFFFFF,5));
+	
+	const loader2 = new THREE.GLTFLoader();
+	loader2.load("./untitled.glb", gltf => {
+			scene2.add(gltf.scene);
+	});
+
 	(function animate() {
-		renderer.render(scene, camera);
+		renderer.render(scene2, camera);
 		requestAnimationFrame(animate);
 	})();
 
